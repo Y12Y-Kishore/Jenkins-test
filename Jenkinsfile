@@ -2,33 +2,31 @@ pipeline {
   agent any
   stages {
     stage('A') {
-      parallel {
-        stage('A') {
-          post {
-            always {
-              echo '========always========'
-            }
-
-            success {
-              echo '========A executed successfully========'
-            }
-
-            failure {
-              echo '========A execution failed========'
-            }
-
-          }
-          steps {
-            echo 'hello'
-          }
+      environment {
+        name = 'kishore'
+      }
+      post {
+        always {
+          echo '========always========'
         }
 
-        stage('') {
-          steps {
-            sh 'echo "hello"'
-          }
+        success {
+          echo '========A executed successfully========'
         }
 
+        failure {
+          echo '========A execution failed========'
+        }
+
+      }
+      steps {
+        echo 'hello'
+      }
+    }
+
+    stage('') {
+      steps {
+        echo 'hello'
       }
     }
 
