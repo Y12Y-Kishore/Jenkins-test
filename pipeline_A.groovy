@@ -6,6 +6,7 @@ pipeline {
                 echo "block-1"
                 echo "$NAME"
                 echo "$NAME"
+                echo "$NAME"
             }
         }
     }
