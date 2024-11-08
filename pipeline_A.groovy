@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo "block-1"
                 echo "$NAME"
+                echo "$NAME"
             }
         }
     }
